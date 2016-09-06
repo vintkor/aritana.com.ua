@@ -35,25 +35,15 @@ $(document).ready(function() {
 
     $(".owl-carousel").owlCarousel({
         loop: true,
-        margin: 20,
         lazyLoad: true,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 3000,
         autoplayHoverPause: true,
         nav: true,
         navText: ['&larr;', '&rarr;'],
         responsive: {
-            0: {
-                items: 1
-            },
-            400: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
             1000: {
-                items: 4
+                items: 1
             }
         }
     });

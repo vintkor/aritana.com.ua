@@ -1,6 +1,6 @@
-$blue: #2C77CB;
+$blue: #1DA4E2;
 $green: #7BC748;
-$red: #FF1B71;
+$red: #EF5480;
 
 $white: #fff;
 $black: #333;
@@ -14,6 +14,7 @@ h4,
 h5,
 h6 {
 	font-weight: 700;
+	font-family: 'PT Sans', sans-serif;
 }
 
 div,
@@ -30,6 +31,7 @@ span,
 p,
 li {
 	color: $black;
+	font-family: 'Museo Sans Cyrl', sans-serif;
 }
 
 a {
@@ -63,6 +65,233 @@ input {
 .align-center {
 	text-align: center;
 }
+
+/* ____________________________________Header____________________________________ */
+
+header {
+	padding: 20px 0;
+	background: $white;
+}
+
+/* ____________________________________Top-Nav___________________________________ */
+
+.top-nav {
+	background: $blue;
+	ul {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+	.current-menu-item {
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 10px 0 10px;
+			border-color: $red transparent transparent transparent;
+			position: absolute;
+			margin-left: -10px;
+			left: 50%;
+			z-index: 10;
+		}	
+		a {
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-bottom: 4px solid transparent;
+			background: darken($blue, 5%);
+			border-color: $red;
+		}		
+	}
+	li {
+		list-style: none;
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		text-align: center;
+		&:hover {
+			&:after {
+				display: block;
+			}
+		}
+		a {
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding-top: 25px;
+			padding-bottom: 21px;
+			color: $white;
+			border-bottom: 4px solid transparent;
+			text-transform: uppercase;
+			font-weight: 500;
+			&:hover {
+				background: darken($blue, 5%);
+				border-color: $red;
+			}
+		}
+	}
+}
+
+/* ____________________________________SC-1______________________________________ */
+
+.sc-1 {
+	z-index: 5;
+	position: relative;
+	.slide_bg {
+		height: 60vh;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+	}
+	.wrapper {
+		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQAM2NjbGjMhiIIEjR46chQvCBECKwILIAmBBdAGQIADeTRDt7xfZzAAAAABJRU5ErkJggg==") repeat,
+						rgba($black, .05);
+		height: 100%;
+		width: 100%;
+	}
+	.flex {
+		text-align: center;
+	}
+	h2 {
+		font-size: $size * 5;
+		color: $white;
+		text-shadow: 2px 2px 3px rgba($black, .5);
+	}
+	.more {
+		background: $blue;
+		color: $white;
+		padding: 7px 15px;
+		margin-top: 15px;
+		display: inline-block;
+		transition: .1s;
+		&:hover {
+			background: $red;
+		}
+	}
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		margin-top: -45px;
+		left: 0;
+		right: 0;
+		.owl-prev {
+			position: absolute;
+			left: 15px;
+			background: rgba($white, .4);
+			padding: 10px 18px 13px;
+			color: $black;
+			font-size: $size * 2;
+			border-radius: 50%;
+			&:hover {
+				background: rgba($black, .6);
+				color: $white;
+			}
+		}
+		.owl-next {
+			position: absolute;
+			right: 15px;
+			background: rgba($white, .4);
+			padding: 10px 18px 13px;
+			color: $black;
+			font-size: $size * 2;
+			border-radius: 50%;
+			&:hover {
+				background: rgba($black, .6);
+				color: $white;
+			}
+		}
+	}
+}
+
+/* ____________________________________SC-2______________________________________ */
+
+.sc-2 {
+	h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.about-us {
+		padding: 20px;
+		border: 15px solid rgba($green, .2);
+		p {
+			text-indent: 40px;
+			text-align: justify;
+		}
+	}
+}
+
+/* ____________________________________SC-3______________________________________ */
+
+.sc-3 {
+	position: relative;
+	margin-top: -50px;
+	z-index: 10;
+	.col-md-4 {
+		padding: 0;
+		background: $white;
+
+		img {
+			transition: .2s;
+		}
+
+		.wrapper {
+			padding: 20px;
+			text-align: center;
+			border: 1px solid rgba($blue, .3);
+		}
+		&:nth-child(3n+2) {
+			margin-left: -1px;
+			margin-right: -1px;
+		}
+
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6) {
+			margin-top: -1px;
+			margin-bottom: -1px;
+		}
+
+		&:hover {
+			cursor: pointer;
+			img {
+				transform: scale(1.2);
+			}
+		}
+	}
+	img {
+		width: 60%;
+		height: auto;
+	}
+}
+
+/* ____________________________________SC-4______________________________________ */
+
+.sc-4 {
+	background: #dee;
+	h2,
+	h3 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+/* ____________________________________SC-5______________________________________ */
+/* ____________________________________SC-6______________________________________ */
+/* ____________________________________Footer____________________________________ */
 
 @import "_fonts";
 
