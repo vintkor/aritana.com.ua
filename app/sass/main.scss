@@ -1,0 +1,68 @@
+$blue: #2C77CB;
+$green: #7BC748;
+$red: #FF1B71;
+
+$white: #fff;
+$black: #333;
+
+$size: 16px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+div,
+span,
+p,
+li,
+a {
+	font-weight: 300;
+	font-size: $size;
+}
+
+div,
+span,
+p,
+li {
+	color: $black;
+}
+
+a {
+	color: $red;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+}
+
+input {
+	outline: none;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+@import "_fonts";
+

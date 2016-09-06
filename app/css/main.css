@@ -1,0 +1,107 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; }
+
+div,
+span,
+p,
+li,
+a {
+  font-weight: 300;
+  font-size: 16px; }
+
+div,
+span,
+p,
+li {
+  color: #333; }
+
+a {
+  color: #FF1B71; }
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none; }
+
+input {
+  outline: none; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_100.otf);
+  font-weight: 100; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_300.otf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_500.otf);
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_700.otf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_900.otf);
+  font-weight: 900; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PT_Sans-Web-Bold.ttf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PT_Sans-Web-Regular.ttf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/RobotoCondensed-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/RobotoCondensed-Regular.ttf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/RobotoCondensed-Bold.ttf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Russo One';
+  src: url(../fonts/Russo-One.ttf);
+  font-weight: 700; }
