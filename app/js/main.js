@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     /*------------------------------- Owl.Carousel -----------------------------*/
 
-    $(".owl-carousel").owlCarousel({
+    $(".owl-carousel-1").owlCarousel({
         loop: true,
         lazyLoad: true,
         autoplay: true,
@@ -44,6 +44,19 @@ $(document).ready(function() {
         responsive: {
             1000: {
                 items: 1
+            }
+        }
+    });
+
+    $(".owl-carousel-2").owlCarousel({
+        loop: true,
+        lazyLoad: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            500: {
+                items: 6
             }
         }
     });
