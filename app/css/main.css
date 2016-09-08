@@ -61,6 +61,38 @@ input {
 .align-center {
   text-align: center; }
 
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%; }
+
+.main-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+
+.content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+.footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
 /* ____________________________________Header____________________________________ */
 header {
   padding: 20px 0;
@@ -273,6 +305,13 @@ header {
   position: relative;
   margin-top: -50px;
   z-index: 10; }
+  .sc-3 a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
   .sc-3 .col-md-4 {
     padding: 0;
     background: #fff; }
@@ -365,7 +404,9 @@ header {
             filter: grayscale(100%);
     -webkit-transition: .2s;
     transition: .2s;
-    opacity: .5; }
+    opacity: .5;
+    width: 100%;
+    height: auto; }
   .sc-5 a:hover img {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
@@ -470,6 +511,12 @@ footer {
     -webkit-transition: .2s;
     transition: .2s; }
 
+/* ____________________________________Index.php________________________________ */
+.index-php .thumb img {
+  width: 100%;
+  height: auto; }
+
+/* ____________________________________Other____________________________________ */
 #toTop {
   width: 100px;
   text-align: center;

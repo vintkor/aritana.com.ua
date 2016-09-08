@@ -73,6 +73,26 @@ input {
 	text-align: center;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+.main-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
 /* ____________________________________Header____________________________________ */
 
 header {
@@ -323,6 +343,14 @@ header {
 	position: relative;
 	margin-top: -50px;
 	z-index: 10;
+	a {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
 	.col-md-4 {
 		padding: 0;
 		background: $white;
@@ -437,6 +465,8 @@ header {
 		filter: grayscale(100%);
 		transition: .2s;
 		opacity: .5;
+		width: 100%;
+		height: auto;
 	}
 	a {
 		&:hover {
@@ -566,6 +596,19 @@ footer {
 		transition: .2s;
 	}
 }
+
+/* ____________________________________Index.php________________________________ */
+
+.index-php {
+	.thumb {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+/* ____________________________________Other____________________________________ */
 
 #toTop {
 	width: 100px;
