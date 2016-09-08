@@ -78,6 +78,16 @@ input {
 header {
 	padding: 20px 0;
 	background: $white;
+	.phone {
+		font-family: 'PT Sans', sans-serif;
+		line-height: $size * 1.5;
+		margin-bottom: 0;
+		img {
+			width: $size;
+			height: $size;
+			margin-right: 10px;
+		}
+	}
 }
 
 /* ____________________________________Top-Nav___________________________________ */
@@ -120,7 +130,35 @@ header {
 		position: relative;
 		width: 100%;
 		text-align: center;
+		position: relative;
+		ul {
+			display: none;
+			position: absolute;
+			top: 72px;
+			left: 0;
+			text-align: left;
+			z-index: 15;
+			li {
+				white-space: nowrap;
+				position: relative;
+				width: 100%;
+				text-align: left;
+				a {
+					padding: 20px 20px;
+					background: $main-color;
+					&:hover {
+						border-bottom: none;
+						padding-bottom: 24px;
+						border-left: 4px solid $accent-color;
+						padding-left: 16px;
+					}
+				}
+			}
+		}
 		&:hover {
+			ul {
+				display: block;
+			}
 			&:after {
 				display: block;
 			}
@@ -453,15 +491,17 @@ header {
 		transform: scale(.9);
 	}
 	.text{
-		background: $main-color;
+		background: rgba($main-color, .9);
 		padding: 20px;
 		border-top: 3px solid $accent-color;
 		position: relative;
 		color: $white;
-		text-shadow: 1px 1px 1px rgba($black, .3);
+		h3 {
+			padding-bottom: $size * 1.4;
+		}
 		p {
 			text-align: left;
-			color: $white;
+			color: $black;
 		}
 		&:before {
 			display: block;
