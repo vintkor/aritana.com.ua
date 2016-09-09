@@ -93,6 +93,36 @@ body {
 	flex: 0 0 auto;
 }
 
+img.alignleft {
+	float: left;
+	margin: 20px;
+	margin-left: 0;
+}
+
+img.alignright {
+	float: right;
+	margin: 20px;
+	margin-right: 0;
+}
+
+img.aligncenter {
+    display: block;
+    margin: 20px auto;
+}
+
+img.alignnone {
+    display: block;
+    margin: 20px;
+}
+
+blockquote {
+	border-color: $accent-color;
+	background: darken($white, 5%);
+	p {
+		color: darken($black, 50%);
+	}
+}
+
 /* ____________________________________Header____________________________________ */
 
 header {
@@ -120,7 +150,8 @@ header {
 		margin-bottom: 0;
 		padding-left: 0;
 	}
-	.current-menu-item {
+	.current-menu-item,
+	.current-post-parent {
 		&:after {
 			content: '';
 			width: 0;
@@ -389,6 +420,15 @@ header {
 	}
 }
 
+body.category-uslugi {
+	.sc-3 {
+		margin-top: 0;
+	}
+	h1 {
+		text-align: center;
+	}
+}
+
 /* ____________________________________SC-4______________________________________ */
 
 .sc-4 {
@@ -555,6 +595,12 @@ header {
 	background: lighten($black, 5%);
 	h3,li,p,a {
 		color: $white;
+		transition: .2s;
+	}
+	li:hover {
+		a {
+			color: $accent-color;			
+		}
 	}
 	ul {
 		padding: 0;
@@ -597,17 +643,6 @@ footer {
 	}
 }
 
-/* ____________________________________Index.php________________________________ */
-
-.index-php {
-	.thumb {
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-}
-
 /* ____________________________________Other____________________________________ */
 
 #toTop {
@@ -631,6 +666,200 @@ footer {
 	transition: .2s;
 	&:hover {
 		opacity: 1;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+/* ____________________________________Index.php________________________________ */
+
+.index-php {
+	padding-bottom: 30px;	
+	h1 {
+		text-align: center;
+	}
+	p {
+		margin-bottom: 20px;
+		text-align: justify;
+		text-indent: 40px;
+	}
+	ul {
+		padding-left: 20px;
+	}
+		
+}
+
+.thumb {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+/* ____________________________________category-news____________________________________ */
+
+.news {
+	h1 {
+		text-align: center;
+	}
+	a.read-more {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	h2 {
+		background: darken($white, 5%);
+		border-left: 4px solid $accent-color;
+		padding: 15px 20px 11px;
+		margin-top: 0;
+		transition: .2s;
+	}
+	.one-news {
+		&:hover {
+			h2 {
+				color: $main-color;
+			}
+		}
+	}
+}
+
+/* ____________________________________breadcrumbs_________________________________ */
+
+body.home {
+	.bread {
+		display: none;
+	}
+}
+
+.bread {
+	padding: 10px 0 0;
+	hr {
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+	span {
+		color: lighten($black, 30%);
+	}
+	a {
+		position: relative;
+		span {
+			color: lighten($black, 30%);
+		}
+		&:hover {
+			span {
+				color: $accent-color;
+			}
+			&:after {
+				width: 100%;
+			}
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			left: 0;
+			bottom: -3px;
+			width: 0;
+			height: 1px;
+			background: $accent-color;
+			transition: .2s;
+		}
+	}
+}
+
+/* ____________________________________navigate____________________________________ */
+
+.navigate {
+	text-align: center;
+	margin-bottom: 20px;
+	.pages {
+		border: none;
+		background: darken($white, 5%);
+		padding: 5px 10px;
+		border-bottom: 3px solid transparent;
+	}
+	.current {
+		border-color: transparent !important;
+		border: none;
+		font-weight: 300 !important;
+		border-bottom: 3px solid $accent-color !important;
+		background: $main-color;
+		color: $white;
+		padding: 5px 10px;
+	}
+	.page,
+	.nextpostslink,
+	.previouspostslink {
+		color: $white;
+		border: none;
+		background: $main-color;
+		padding: 5px 10px !important;
+		border-bottom: 3px solid transparent;
+		&:hover {
+			border-color: $accent-color;
+		}
+	}
+}
+
+/* ____________________________________page-template-page-contacts_________________ */
+
+body.page-template-page-contacts {
+	.wpcf7-form {
+		input,
+		textarea,
+		label {
+			width: 100%;
+		}
+		label {
+			font-weight: 100;
+		}
+		input,
+		textarea {
+			border: 3px solid darken($white, 5%);
+			box-shadow: none;
+			background: darken($white, 5%);
+			&:active,
+			&:focus {
+				border-color: $accent-color;
+				background: $white;
+			}
+		}
+		input[type="submit"] {
+			border: none;
+			background: $main-color;
+			border-bottom: 3px solid transparent;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: $size;
+			&:hover,
+			&:active,
+			&:focus {
+				border-color: $accent-color;
+			}
+		}
+		textarea {
+			min-height: 186px;
+		}
+	}
+}
+
+textarea,
+input {
+	outline: none !important;
+}
+	
+
+/* ____________________________________page-404____________________________________ */
+
+.page-404 {
+	img {
+		width: 100%;
+		height: auto;
 	}
 }
 

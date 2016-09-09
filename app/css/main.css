@@ -93,6 +93,30 @@ body {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
 
+img.alignleft {
+  float: left;
+  margin: 20px;
+  margin-left: 0; }
+
+img.alignright {
+  float: right;
+  margin: 20px;
+  margin-right: 0; }
+
+img.aligncenter {
+  display: block;
+  margin: 20px auto; }
+
+img.alignnone {
+  display: block;
+  margin: 20px; }
+
+blockquote {
+  border-color: #EF5480;
+  background: #f2f2f2; }
+  blockquote p {
+    color: black; }
+
 /* ____________________________________Header____________________________________ */
 header {
   padding: 20px 0;
@@ -120,7 +144,8 @@ header {
             justify-content: space-between;
     margin-bottom: 0;
     padding-left: 0; }
-  .top-nav .current-menu-item:after {
+  .top-nav .current-menu-item:after,
+  .top-nav .current-post-parent:after {
     content: '';
     width: 0;
     height: 0;
@@ -131,7 +156,8 @@ header {
     margin-left: -10px;
     left: 50%;
     z-index: 10; }
-  .top-nav .current-menu-item a {
+  .top-nav .current-menu-item a,
+  .top-nav .current-post-parent a {
     display: block;
     top: 0;
     left: 0;
@@ -338,6 +364,12 @@ header {
     width: 60%;
     height: auto; }
 
+body.category-uslugi .sc-3 {
+  margin-top: 0; }
+
+body.category-uslugi h1 {
+  text-align: center; }
+
 /* ____________________________________SC-4______________________________________ */
 .sc-4 {
   background: #fff;
@@ -479,7 +511,11 @@ header {
 .sc-7 {
   background: #404040; }
   .sc-7 h3, .sc-7 li, .sc-7 p, .sc-7 a {
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: .2s;
+    transition: .2s; }
+  .sc-7 li:hover a {
+    color: #EF5480; }
   .sc-7 ul {
     padding: 0; }
   .sc-7 li {
@@ -511,11 +547,6 @@ footer {
     -webkit-transition: .2s;
     transition: .2s; }
 
-/* ____________________________________Index.php________________________________ */
-.index-php .thumb img {
-  width: 100%;
-  height: auto; }
-
 /* ____________________________________Other____________________________________ */
 #toTop {
   width: 100px;
@@ -541,6 +572,152 @@ footer {
   transition: .2s; }
   #toTop:hover {
     opacity: 1; }
+
+.relative {
+  position: relative; }
+
+/* ____________________________________Index.php________________________________ */
+.index-php {
+  padding-bottom: 30px; }
+  .index-php h1 {
+    text-align: center; }
+  .index-php p {
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 40px; }
+  .index-php ul {
+    padding-left: 20px; }
+
+.thumb img {
+  width: 100%;
+  height: auto; }
+
+/* ____________________________________category-news____________________________________ */
+.news h1 {
+  text-align: center; }
+
+.news a.read-more {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.news h2 {
+  background: #f2f2f2;
+  border-left: 4px solid #EF5480;
+  padding: 15px 20px 11px;
+  margin-top: 0;
+  -webkit-transition: .2s;
+  transition: .2s; }
+
+.news .one-news:hover h2 {
+  color: #69a93d; }
+
+/* ____________________________________breadcrumbs_________________________________ */
+body.home .bread {
+  display: none; }
+
+.bread {
+  padding: 10px 0 0; }
+  .bread hr {
+    margin-bottom: 0;
+    margin-top: 10px; }
+  .bread span {
+    color: gray; }
+  .bread a {
+    position: relative; }
+    .bread a span {
+      color: gray; }
+    .bread a:hover span {
+      color: #EF5480; }
+    .bread a:hover:after {
+      width: 100%; }
+    .bread a:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background: #EF5480;
+      -webkit-transition: .2s;
+      transition: .2s; }
+
+/* ____________________________________navigate____________________________________ */
+.navigate {
+  text-align: center;
+  margin-bottom: 20px; }
+  .navigate .pages {
+    border: none;
+    background: #f2f2f2;
+    padding: 5px 10px;
+    border-bottom: 3px solid transparent; }
+  .navigate .current {
+    border-color: transparent !important;
+    border: none;
+    font-weight: 300 !important;
+    border-bottom: 3px solid #EF5480 !important;
+    background: #69a93d;
+    color: #fff;
+    padding: 5px 10px; }
+  .navigate .page,
+  .navigate .nextpostslink,
+  .navigate .previouspostslink {
+    color: #fff;
+    border: none;
+    background: #69a93d;
+    padding: 5px 10px !important;
+    border-bottom: 3px solid transparent; }
+    .navigate .page:hover,
+    .navigate .nextpostslink:hover,
+    .navigate .previouspostslink:hover {
+      border-color: #EF5480; }
+
+/* ____________________________________page-template-page-contacts_________________ */
+body.page-template-page-contacts .wpcf7-form input,
+body.page-template-page-contacts .wpcf7-form textarea,
+body.page-template-page-contacts .wpcf7-form label {
+  width: 100%; }
+
+body.page-template-page-contacts .wpcf7-form label {
+  font-weight: 100; }
+
+body.page-template-page-contacts .wpcf7-form input,
+body.page-template-page-contacts .wpcf7-form textarea {
+  border: 3px solid #f2f2f2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #f2f2f2; }
+  body.page-template-page-contacts .wpcf7-form input:active, body.page-template-page-contacts .wpcf7-form input:focus,
+  body.page-template-page-contacts .wpcf7-form textarea:active,
+  body.page-template-page-contacts .wpcf7-form textarea:focus {
+    border-color: #EF5480;
+    background: #fff; }
+
+body.page-template-page-contacts .wpcf7-form input[type="submit"] {
+  border: none;
+  background: #69a93d;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px; }
+  body.page-template-page-contacts .wpcf7-form input[type="submit"]:hover, body.page-template-page-contacts .wpcf7-form input[type="submit"]:active, body.page-template-page-contacts .wpcf7-form input[type="submit"]:focus {
+    border-color: #EF5480; }
+
+body.page-template-page-contacts .wpcf7-form textarea {
+  min-height: 186px; }
+
+textarea,
+input {
+  outline: none !important; }
+
+/* ____________________________________page-404____________________________________ */
+.page-404 img {
+  width: 100%;
+  height: auto; }
 
 @font-face {
   font-family: 'Museo Sans Cyrl';

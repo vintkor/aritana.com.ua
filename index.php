@@ -5,9 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1><?php the_title(); ?></h1>
-                    <div class="thumb">
-                        <?php the_post_thumbnail(); ?>
-                    </div>
+                    <hr>
                     <?php the_content(); ?>
                 </div>
             </div>

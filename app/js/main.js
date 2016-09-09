@@ -61,4 +61,11 @@ $(document).ready(function() {
         }
     });
 
+    $('textarea').removeAttr('cols');
+    $('textarea').removeAttr('rows');
+    $('input').removeAttr('cols');
+    $('input').removeAttr('rows');
+
+    $('table').addClass('table');
+
 });
