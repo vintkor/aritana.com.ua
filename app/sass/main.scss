@@ -36,6 +36,10 @@ li {
 	font-family: 'Museo Sans Cyrl', sans-serif;
 }
 
+li {
+	list-style-image: url("../img/checked.png");
+}
+
 a {
 	color: $accent-color;
 }
@@ -138,6 +142,68 @@ header {
 			margin-right: 10px;
 		}
 	}
+	.callback,
+	.tender {
+		text-align: center;
+		background: darken($white, 5%);
+		padding: 7px 10px;
+		color: lighten($black, 20%);
+		position: relative;
+		border-bottom: 3px solid $accent-color;
+		transition: .2s;
+		a {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		&:hover {
+			background: $main-color;
+			color: $white;
+			cursor: pointer;
+		}
+	}
+}
+
+/* ____________________________________Headhesive________________________________ */
+
+.headhesive {
+	position: fixed;
+	transform: translatey(100px);
+	z-index: 50;
+	transition: .2s;
+	bottom: 0;
+	left: 50%;
+	margin-left: -170px;
+	.callback,
+	.tender {
+		text-align: center;
+		background: $main-color;
+		padding: 7px 10px;
+		color: $white;
+		position: relative;
+		border-bottom: 4px solid $accent-color;
+		transition: .2s;
+		a {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		&:hover {
+			background: darken($main-color, 15%);
+			color: $white;
+			cursor: pointer;
+		}
+	}
+}
+
+.headhesive--stick {
+	transform: translatey(0);
 }
 
 /* ____________________________________Top-Nav___________________________________ */
@@ -394,6 +460,7 @@ header {
 			padding: 20px;
 			text-align: center;
 			border: 1px solid rgba($main-color, .3);
+			overflow: hidden;
 		}
 		&:nth-child(3n+2) {
 			margin-left: -1px;
@@ -808,51 +875,135 @@ body.home {
 
 /* ____________________________________page-template-page-contacts_________________ */
 
-body.page-template-page-contacts {
-	.wpcf7-form {
-		input,
-		textarea,
-		label {
-			width: 100%;
-		}
-		label {
-			font-weight: 100;
-		}
-		input,
-		textarea {
-			border: 3px solid darken($white, 5%);
-			box-shadow: none;
-			background: darken($white, 5%);
-			&:active,
-			&:focus {
-				border-color: $accent-color;
-				background: $white;
-			}
-		}
-		input[type="submit"] {
-			border: none;
-			background: $main-color;
-			border-bottom: 3px solid transparent;
-			text-transform: uppercase;
-			font-weight: 700;
-			font-size: $size;
-			&:hover,
-			&:active,
-			&:focus {
-				border-color: $accent-color;
-			}
-		}
-		textarea {
-			min-height: 186px;
+
+.wpcf7-form {
+	input,
+	textarea,
+	label {
+		width: 100%;
+		outline: none;
+		box-shadow: none;
+	}
+	label {
+		font-weight: 100;
+	}
+	input,
+	textarea {
+		border: 3px solid darken($white, 5%);
+		box-shadow: none;
+		background: darken($white, 5%);
+		&:active,
+		&:focus {
+			border-color: $accent-color;
+			background: $white;
 		}
 	}
+	input[type="submit"] {
+		border: none;
+		border-bottom: 3px solid transparent;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $size;
+		color: $black;
+		// border-bottom: 3px solid $accent-color;
+		padding-top: 9px;
+		transition: .2s;
+		&:hover {
+			background: $main-color;
+			color: $white;
+		}
+	}
+	input[type="file"] {
+		border: none;
+		border-bottom: 3px solid transparent;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $size;
+		color: $black;
+		padding-top: 9px;
+		transition: .2s;
+	}
+	textarea {
+		min-height: 186px;
+	}
 }
+
 
 textarea,
 input {
 	outline: none !important;
 }
 	
+
+/* ____________________________________about-us-menu____________________________ */
+
+.about-us-menu {
+	padding-left: 0 !important;
+	li {
+		list-style: none;
+		position: relative;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: darken($white, 5%);
+			padding: 20px;
+			border-left: 4px solid $accent-color;
+			color: $black;
+			&:hover {
+				background: $main-color;
+				color: $white;
+			}
+		}
+	}
+}
+
+.page-template-page-about-us {
+	h2 {
+		margin-bottom: 27px;
+	}
+}
+
+/* ____________________________________Modal____________________________________ */
+.modal-dialog {
+	margin: 10vh auto;
+}
+
+.modal {
+
+	.modal-header {
+		border-radius: 6px 6px 0 0;
+	}
+	.modall-input {
+		border: 3px solid darken($white, 5%);
+		box-shadow: none;
+		background: darken($white, 5%);
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+		transition: .2s;
+		border-radius: 3px;
+		&:active,
+		&:focus {
+			border-color: $accent-color;
+			background: $white;
+		}
+	}	
+	input[type="submit"] {
+		border: none;
+		color: $black;
+		transition: .2s;
+		&:hover {
+			background: $main-color;
+			color: $white;
+		}
+	}
+}
+
+.modal-header {
+	background: $main-color;
+	color: $white;
+}
 
 /* ____________________________________page-404____________________________________ */
 

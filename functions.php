@@ -50,3 +50,17 @@ function phone_in_contact_page_text_widget_init() {
   ) );
 }
 add_action( 'widgets_init', 'phone_in_contact_page_text_widget_init' );
+
+
+// --------------------Виджет для приглашения на тендер---------------------------
+function tender_text_widget_init() {
+  register_sidebar( array(
+    'name'          => 'Виджет для приглашения на тендер',
+    'id'            => 'tender',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '<span class="hidden">',
+    'after_title'   => '</span>',
+  ) );
+}
+add_action( 'widgets_init', 'tender_text_widget_init' );

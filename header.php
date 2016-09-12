@@ -14,7 +14,7 @@
     <meta charset="<?php echo get_bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo get_bloginfo('name'); ?> - <?php echo get_bloginfo('description'); ?></title>
+    <title><?php wp_title('&#8594;', true, 'right'); echo get_bloginfo('name');?> - <? echo get_bloginfo('description') ?></title>
     <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/app/css/libs.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/app/css/main.css">
@@ -34,7 +34,21 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/app/img/Logo.svg" alt="<?php echo get_bloginfo('name'); ?> - <?php echo get_bloginfo('description'); ?>">
                         </a>
                     </div>
-                    <div class="col-md-offset-5 col-md-2 align-right">
+                    <div class="col-md-5">
+                        <span class="my-top-buttons">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-5 callback">
+                                Заказать обратный звонок
+                                <a data-toggle="modal" data-target="#callback"></a>
+                            </div>
+                            <div class="col-md-5 tender">
+                                Пригласить нас на тендер
+                                <a data-toggle="modal" data-target="#tender"></a>
+                            </div>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 align-right">
                         <p class="phone"><img src="<?php echo get_template_directory_uri(); ?>/app/img/phone.svg">(044) 227-20-07</p>
                         <p class="phone"><img src="<?php echo get_template_directory_uri(); ?>/app/img/phone.svg">(095) 076-08-20</p>
                     </div>

@@ -22,6 +22,9 @@ li {
   color: #333;
   font-family: 'Museo Sans Cyrl', sans-serif; }
 
+li {
+  list-style-image: url("../img/checked.png"); }
+
 a {
   color: #EF5480; }
 
@@ -129,6 +132,70 @@ header {
       width: 16px;
       height: 16px;
       margin-right: 10px; }
+  header .callback,
+  header .tender {
+    text-align: center;
+    background: #f2f2f2;
+    padding: 7px 10px;
+    color: #666666;
+    position: relative;
+    border-bottom: 3px solid #EF5480;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    header .callback a,
+    header .tender a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+    header .callback:hover,
+    header .tender:hover {
+      background: #69a93d;
+      color: #fff;
+      cursor: pointer; }
+
+/* ____________________________________Headhesive________________________________ */
+.headhesive {
+  position: fixed;
+  -webkit-transform: translatey(100px);
+      -ms-transform: translatey(100px);
+          transform: translatey(100px);
+  z-index: 50;
+  -webkit-transition: .2s;
+  transition: .2s;
+  bottom: 0;
+  left: 50%;
+  margin-left: -170px; }
+  .headhesive .callback,
+  .headhesive .tender {
+    text-align: center;
+    background: #69a93d;
+    padding: 7px 10px;
+    color: #fff;
+    position: relative;
+    border-bottom: 4px solid #EF5480;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    .headhesive .callback a,
+    .headhesive .tender a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+    .headhesive .callback:hover,
+    .headhesive .tender:hover {
+      background: #467129;
+      color: #fff;
+      cursor: pointer; }
+
+.headhesive--stick {
+  -webkit-transform: translatey(0);
+      -ms-transform: translatey(0);
+          transform: translatey(0); }
 
 /* ____________________________________Top-Nav___________________________________ */
 .top-nav {
@@ -347,7 +414,8 @@ header {
     .sc-3 .col-md-4 .wrapper {
       padding: 20px;
       text-align: center;
-      border: 1px solid rgba(105, 169, 61, 0.3); }
+      border: 1px solid rgba(105, 169, 61, 0.3);
+      overflow: hidden; }
     .sc-3 .col-md-4:nth-child(3n+2) {
       margin-left: -1px;
       margin-right: -1px; }
@@ -677,42 +745,118 @@ body.home .bread {
       border-color: #EF5480; }
 
 /* ____________________________________page-template-page-contacts_________________ */
-body.page-template-page-contacts .wpcf7-form input,
-body.page-template-page-contacts .wpcf7-form textarea,
-body.page-template-page-contacts .wpcf7-form label {
-  width: 100%; }
+.wpcf7-form input,
+.wpcf7-form textarea,
+.wpcf7-form label {
+  width: 100%;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
-body.page-template-page-contacts .wpcf7-form label {
+.wpcf7-form label {
   font-weight: 100; }
 
-body.page-template-page-contacts .wpcf7-form input,
-body.page-template-page-contacts .wpcf7-form textarea {
+.wpcf7-form input,
+.wpcf7-form textarea {
   border: 3px solid #f2f2f2;
   -webkit-box-shadow: none;
           box-shadow: none;
   background: #f2f2f2; }
-  body.page-template-page-contacts .wpcf7-form input:active, body.page-template-page-contacts .wpcf7-form input:focus,
-  body.page-template-page-contacts .wpcf7-form textarea:active,
-  body.page-template-page-contacts .wpcf7-form textarea:focus {
+  .wpcf7-form input:active, .wpcf7-form input:focus,
+  .wpcf7-form textarea:active,
+  .wpcf7-form textarea:focus {
     border-color: #EF5480;
     background: #fff; }
 
-body.page-template-page-contacts .wpcf7-form input[type="submit"] {
+.wpcf7-form input[type="submit"] {
   border: none;
-  background: #69a93d;
   border-bottom: 3px solid transparent;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px; }
-  body.page-template-page-contacts .wpcf7-form input[type="submit"]:hover, body.page-template-page-contacts .wpcf7-form input[type="submit"]:active, body.page-template-page-contacts .wpcf7-form input[type="submit"]:focus {
-    border-color: #EF5480; }
+  font-size: 16px;
+  color: #333;
+  padding-top: 9px;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .wpcf7-form input[type="submit"]:hover {
+    background: #69a93d;
+    color: #fff; }
 
-body.page-template-page-contacts .wpcf7-form textarea {
+.wpcf7-form input[type="file"] {
+  border: none;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+  padding-top: 9px;
+  -webkit-transition: .2s;
+  transition: .2s; }
+
+.wpcf7-form textarea {
   min-height: 186px; }
 
 textarea,
 input {
   outline: none !important; }
+
+/* ____________________________________about-us-menu____________________________ */
+.about-us-menu {
+  padding-left: 0 !important; }
+  .about-us-menu li {
+    list-style: none;
+    position: relative; }
+    .about-us-menu li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #f2f2f2;
+      padding: 20px;
+      border-left: 4px solid #EF5480;
+      color: #333; }
+      .about-us-menu li a:hover {
+        background: #69a93d;
+        color: #fff; }
+
+.page-template-page-about-us h2 {
+  margin-bottom: 27px; }
+
+/* ____________________________________Modal____________________________________ */
+.modal-dialog {
+  margin: 10vh auto; }
+
+.modal .modal-header {
+  -webkit-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0; }
+
+.modal .modall-input {
+  border: 3px solid #f2f2f2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #f2f2f2;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-border-radius: 3px;
+          border-radius: 3px; }
+  .modal .modall-input:active, .modal .modall-input:focus {
+    border-color: #EF5480;
+    background: #fff; }
+
+.modal input[type="submit"] {
+  border: none;
+  color: #333;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .modal input[type="submit"]:hover {
+    background: #69a93d;
+    color: #fff; }
+
+.modal-header {
+  background: #69a93d;
+  color: #fff; }
 
 /* ____________________________________page-404____________________________________ */
 .page-404 img {
