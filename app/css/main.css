@@ -233,6 +233,15 @@ header {
     border-bottom: 4px solid transparent;
     background: #5d9636;
     border-color: #EF5480; }
+  .top-nav .current-menu-item > ul li a,
+  .top-nav .current-post-parent > ul li a {
+    border-color: transparent;
+    display: block;
+    position: relative;
+    z-index: 20; }
+    .top-nav .current-menu-item > ul li a:hover,
+    .top-nav .current-post-parent > ul li a:hover {
+      background: #52842f; }
   .top-nav li {
     list-style: none;
     display: inline-block;
@@ -405,32 +414,43 @@ header {
     left: 0;
     bottom: 0;
     right: 0; }
-  .sc-3 .col-md-4 {
+  .sc-3 .col-md-3 {
     padding: 0;
     background: #fff; }
-    .sc-3 .col-md-4 img {
+    .sc-3 .col-md-3 img {
       -webkit-transition: .2s;
       transition: .2s; }
-    .sc-3 .col-md-4 .wrapper {
+    .sc-3 .col-md-3 .wrapper {
       padding: 20px;
       text-align: center;
       border: 1px solid rgba(105, 169, 61, 0.3);
       overflow: hidden; }
-    .sc-3 .col-md-4:nth-child(3n+2) {
+    .sc-3 .col-md-3:nth-child(4n) {
       margin-left: -1px;
       margin-right: -1px; }
-    .sc-3 .col-md-4:nth-child(4), .sc-3 .col-md-4:nth-child(5), .sc-3 .col-md-4:nth-child(6) {
+    .sc-3 .col-md-3:nth-child(4n+3) {
+      margin-left: -1px;
+      margin-right: -1px; }
+    .sc-3 .col-md-3:nth-child(2), .sc-3 .col-md-3:nth-child(6), .sc-3 .col-md-3:nth-child(10) {
+      margin-left: -1px;
+      margin-right: -1px; }
+    .sc-3 .col-md-3:nth-child(1), .sc-3 .col-md-3:nth-child(5), .sc-3 .col-md-3:nth-child(9) {
+      margin-left: -1px;
+      margin-right: -1px; }
+    .sc-3 .col-md-3:nth-child(5), .sc-3 .col-md-3:nth-child(6), .sc-3 .col-md-3:nth-child(7), .sc-3 .col-md-3:nth-child(8) {
       margin-top: -1px;
       margin-bottom: -1px; }
-    .sc-3 .col-md-4:hover {
+    .sc-3 .col-md-3:hover {
       cursor: pointer; }
-      .sc-3 .col-md-4:hover img {
+      .sc-3 .col-md-3:hover img {
         -webkit-transform: scale(1.2);
             -ms-transform: scale(1.2);
                 transform: scale(1.2); }
   .sc-3 img {
-    width: 60%;
+    width: 80%;
     height: auto; }
+  .sc-3 h3 {
+    font-size: 20.8px; }
 
 body.category-uslugi .sc-3 {
   margin-top: 0; }

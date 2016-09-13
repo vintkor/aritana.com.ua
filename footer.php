@@ -7,7 +7,7 @@
                     <h3>Меню</h3>
                 </div>
                 <div class="col-md-6 align-right">
-                    <h3>Контакты</h3>
+                    <h3>Основные услуги</h3>
                 </div>
             </div>
             <div class="row flex">
@@ -18,14 +18,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/app/img/Logo2.svg" alt="">
                 </div>
                 <div class="col-md-4 align-right">
-                    <ul>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                    </ul>
+                    <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-right') ); ?>
                 </div>
             </div>
         </div>

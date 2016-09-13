@@ -9,11 +9,11 @@
         </div>
         <div class="row">
             <?php $idObj = get_category_by_slug('uslugi'); $id = $idObj->term_id;
-            $n=10;
+            $n=20;
             $recent = new WP_Query("cat=$id&showposts=$n&order=ASC");?>
             <?php while($recent->have_posts()) : $recent->the_post();?>
-            <div class="col-md-4">
-                <div class="wrapper">
+            <div class="col-md-3 ">
+                <div class="wrapper height-uslugi">
                     <?php the_post_thumbnail(); ?>
                     <h3><?php the_title(); ?></h3>
                 </div>

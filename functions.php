@@ -38,6 +38,14 @@ function footer_menu() {
     ));
 }
 
+// --------------------Регистрация меню футер правое --------------------------------------
+add_action('init', 'footer_menu_right');
+function footer_menu_right() {
+    register_nav_menus(array(
+        'footer-menu-right' => 'Меню в футере правое'
+    ));
+}
+
 // --------------------Виджет с телефонами на странице Контакты---------------------------
 function phone_in_contact_page_text_widget_init() {
   register_sidebar( array(
